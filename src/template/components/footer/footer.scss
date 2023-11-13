@@ -1,0 +1,41 @@
+.contacts {
+	background: $bg-contacts;
+	padding: clamp-px(40, 90) 0;
+
+	&__title {
+		@extend %title-style;
+		margin-bottom: clamp-px(28, 98);
+		text-align: center;
+	}
+
+	&__list {
+		display: flex;
+		gap: clamp-px(24, 46);
+		justify-content: center;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		opacity: 0;
+
+		&--active:nth-child(1) {
+			opacity: 1;
+			transition: opacity 0.4s ease-in-out;
+		}
+		&--active:nth-child(2) {
+			opacity: 1;
+			transition: opacity 0.8s ease-in-out;
+		}
+		&--active:nth-child(3) {
+			opacity: 1;
+			transition: opacity 1.2s ease-in-out;
+		}
+	}
+
+	&__link {
+		@extend %text-style;
+		@extend %hover-style;
+	}
+}

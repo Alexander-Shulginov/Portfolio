@@ -1,0 +1,109 @@
+.works {
+	padding: clamp-px(60, 100) 0;
+	background: $bg-skills;
+
+	&__title {
+		@extend %title-style;
+
+		margin-bottom: clamp-px(28, 38);
+	}
+
+	&__example {
+		display: flex;
+		gap: 24px;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+		&:not(:last-child) {
+			margin-bottom: clamp-px(30, 40);
+			padding-bottom: clamp-px(30, 40);
+			border-bottom: 1px solid $color-base;
+		}
+
+		&--active {
+			opacity: 1;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		justify-content: space-between;
+
+		width: 100%;
+	}
+
+	&__name {
+		font-family: $main-font;
+		font-size: clamp-px(20, 26);
+		font-weight: 700;
+		color: $color-base;
+	}
+
+	&__descr {
+		@extend %text-style;
+
+		font-weight: 400;
+	}
+
+	&__details {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__box {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 50px;
+		margin-right: 14px;
+		padding: 2px 0;
+
+		background-color: $color-accent;
+		border-radius: 25px;
+	}
+
+	&__link {
+		position: relative;
+
+		font-family: $main-font;
+		font-size: clamp-px(14, 16);
+		color: $color-base;
+		text-decoration: underline;
+		&::after {
+			content: "";
+
+			display: inline-block;
+
+			width: 16px;
+			height: 16px;
+			margin-left: 8px;
+
+			vertical-align: middle;
+
+			background-image: url(../icons/social/go-to.svg);
+			background-repeat: no-repeat;
+			background-size: 14px;
+		}
+	}
+
+	&__visit-link {
+		margin-left: auto;
+		padding: clamp-px(6, 8) clamp-px(14, 16);
+
+		font-family: $main-font;
+		color: $color-base;
+
+		background-color: $color-accent;
+		border-radius: 25px;
+
+		transition: background-color 0.3s ease-in-out;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: darken($color-accent, 5);
+			}
+		}
+	}
+}

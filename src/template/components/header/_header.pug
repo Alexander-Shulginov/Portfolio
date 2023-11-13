@@ -1,0 +1,20 @@
+header.header
+    .container 
+        .header__inner 
+            a.header__logo(href="index.html", aria-label="Decor icon")
+                svg(class="header__icon" width="52" height="49")
+                    use(xlink:href="./icons/sprite.svg#logo--logo")
+            nav.header__nav 
+                ul.header__list 
+                    li.header__item 
+                        a.header__link(href="#skills") Навыки
+                    li.header__item 
+                        a.header__link(href="#works") Работы
+                    li.header__item 
+                        a.header__link(href="#about") Обо мне
+                    li.header__item 
+                        a.header__link(href="#contacts") Контакты
+            button.header__burger(type="button", aria-label="Button for burger meu") 
+                span.header__burger-line
+                span.header__burger-line
+                span.header__burger-line

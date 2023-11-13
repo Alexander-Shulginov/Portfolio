@@ -1,0 +1,102 @@
+.skills {
+	padding: clamp-px(60, 100) 0;
+	background: $bg-about;
+
+	&__title {
+		@extend %title-style;
+
+		margin-bottom: clamp-px(28, 38);
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+		margin-bottom: 18px;
+	}
+
+	&__item {
+		display: flex;
+		gap: clamp-px(14, 34);
+		align-items: center;
+
+		padding: clamp-px(15, 20);
+
+		opacity: 0;
+		border: 2px solid $color-base;
+		border-radius: $radius-base;
+
+		transition: opacity 0.5s ease-in-out;
+
+		&--active {
+			opacity: 1;
+		}
+	}
+
+	&__icon {
+		flex-shrink: 0;
+	}
+
+	&__descr {
+		@extend %text-style;
+
+		list-style-position: inside;
+		list-style-type: disc;
+	}
+
+	&__techno {
+		display: flex;
+		gap: clamp-px(20, 44);
+		align-items: center;
+		justify-content: space-around;
+
+		padding: clamp-px(8, 20);
+
+		opacity: 0;
+		border: 2px solid $color-base;
+		border-radius: $radius-base;
+
+		transition: opacity 0.5s ease-in-out;
+
+		&--active {
+			opacity: 1;
+		}
+	}
+
+	&__techno-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__techno-icon {
+		margin-bottom: 8px;
+	}
+
+	&__techno-name {
+		@extend %text-style;
+
+		display: block;
+		text-align: center;
+	}
+
+	&__techno-name--link {
+		position: relative;
+		&::after {
+			@include bg-svg("social--go-to");
+
+			content: "";
+
+			position: absolute;
+			right: -24px;
+			bottom: 1.5px;
+
+			width: 16px;
+			height: 16px;
+			margin-left: 8px;
+
+			background-repeat: no-repeat;
+			background-size: 14px;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+@media (max-width: 1120px){
+    .hero {
+        &__descr {
+            max-width: 500px;
+        }
+    }
+    
+}
+
+@media (max-width: 624px){
+    .hero {
+        &__inner {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__descr {
+            max-width: 100%;
+        }
+
+        &__photo {
+            max-width: 190px;
+        }
+    }
+    
+}

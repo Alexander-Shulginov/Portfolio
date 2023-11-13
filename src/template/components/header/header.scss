@@ -1,0 +1,87 @@
+.header {
+	padding: 12px 0;
+	background-color: $color-accent;
+
+	&__logo {
+		transition: transform 0.2s ease-in-out;
+
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__inner {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__list {
+		display: flex;
+		gap: clamp-px(30, 50);
+		align-items: center;
+	}
+
+	&__item {
+		font-family: $second-font;
+		font-size: clamp-px(20, 24);
+		font-weight: 500;
+		color: $color-base;
+	}
+
+	&__link {
+		@extend %hover-style;
+	}
+
+	&__burger {
+		cursor: pointer;
+
+		display: none;
+		flex-direction: column;
+		gap: 13px;
+		align-items: center;
+		justify-content: center;
+
+		background-color: transparent;
+
+		transition: all 0.3s linear;
+	}
+
+	&__burger--active {
+		position: relative;
+		z-index: 22;
+		gap: 15px;
+		transition: all 0.3s linear;
+
+		.header__burger-line:nth-child(1) {
+			transform-origin: top right;
+			transform: rotate(-45deg);
+		}
+		.header__burger-line:nth-child(2) {
+			opacity: 0;
+		}
+		.header__burger-line:nth-child(3) {
+			transform-origin: bottom right;
+			transform: rotate(45deg);
+		}
+
+		.header__burger-line {
+			background-color: $color-base;
+		}
+	}
+
+	&__burger-line {
+		position: relative;
+
+		display: block;
+
+		width: 50px;
+		height: 3px;
+
+		background-color: $color-base;
+		border-radius: 5px;
+	}
+}

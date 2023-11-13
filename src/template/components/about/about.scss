@@ -1,0 +1,49 @@
+.about {
+	padding: clamp-px(60, 120) 0;
+	background: $bg-works;
+
+	&__title {
+		@extend %title-style;
+
+		position: relative;
+		margin-bottom: clamp-px(25, 40);
+		text-align: center;
+		&::after {
+			content: "";
+
+			position: absolute;
+			bottom: -7px;
+			left: 50%;
+			transform: translateX(-50%);
+
+			width: 92px;
+			height: 2px;
+
+			background-color: $color-base;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		max-width: 900px;
+		margin: 0 auto;
+
+		opacity: 0;
+
+		transition: opacity 0.5s ease-in-out;
+
+		&--active {
+			opacity: 1;
+		}
+	}
+
+	&__text {
+		font-family: $main-font;
+		font-size: clamp-px(16, 20);
+		line-height: $line-height-base;
+		color: $color-base;
+	}
+}
