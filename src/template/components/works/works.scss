@@ -1,109 +1,71 @@
 .works {
-	padding: clamp-px(60, 100) 0;
-	background: $bg-skills;
+	padding-bottom: 3rem;
+	background-color: $bg-dark;
 
-	&__title {
-		@extend %title-style;
-
-		margin-bottom: clamp-px(28, 38);
-	}
-
-	&__example {
+	&__item {
 		display: flex;
-		gap: 24px;
-		opacity: 0;
-		transition: opacity 0.5s ease-in-out;
-		&:not(:last-child) {
-			margin-bottom: clamp-px(30, 40);
-			padding-bottom: clamp-px(30, 40);
-			border-bottom: 1px solid $color-base;
-		}
+		gap: $gap-base;
 
-		&--active {
-			opacity: 1;
-		}
+		margin: 2rem; //!
+		padding: 40px 30px;
+
+		color: $color-light;
+
+		background-color: $bg-dark;
+		border: 1px solid $bg-light;
+		border-radius: $radius-base;
+		box-shadow: 7px 7px 0 0 $bg-light;
 	}
 
-	&__info {
+	&__img {
+		flex-shrink: 0;
+	}
+
+	&__content {
 		display: flex;
 		flex-direction: column;
-		gap: 12px;
+		gap: 8px;
 		justify-content: space-between;
+	}
 
-		width: 100%;
+	&__type {
+		font-size: 14px;
+		color: $color-decor;
 	}
 
 	&__name {
-		font-family: $main-font;
-		font-size: clamp-px(20, 26);
-		font-weight: 700;
-		color: $color-base;
+		font-size: 24px;
 	}
 
-	&__descr {
-		@extend %text-style;
-
-		font-weight: 400;
-	}
-
-	&__details {
+	&__tech {
 		display: flex;
-		align-items: flex-end;
-	}
-
-	&__box {
-		display: inline-flex;
+		gap: 12px;
 		align-items: center;
-		justify-content: center;
-
-		width: 50px;
-		margin-right: 14px;
-		padding: 2px 0;
-
-		background-color: $color-accent;
-		border-radius: 25px;
 	}
 
-	&__link {
+	&__visit {
 		position: relative;
-
-		font-family: $main-font;
-		font-size: clamp-px(14, 16);
-		color: $color-base;
 		text-decoration: underline;
 		&::after {
+			@include bg-svg("social--go-to");
+
 			content: "";
 
-			display: inline-block;
+			position: absolute;
+			right: -22px;
+			bottom: 1px;
 
 			width: 16px;
 			height: 16px;
-			margin-left: 8px;
 
-			vertical-align: middle;
-
-			background-image: url(../icons/social/go-to.svg);
 			background-repeat: no-repeat;
-			background-size: 14px;
+			background-size: 16px;
 		}
 	}
 
-	&__visit-link {
-		margin-left: auto;
-		padding: clamp-px(6, 8) clamp-px(14, 16);
-
-		font-family: $main-font;
-		color: $color-base;
-
-		background-color: $color-accent;
-		border-radius: 25px;
-
-		transition: background-color 0.3s ease-in-out;
-
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: darken($color-accent, 5);
-			}
-		}
+	&__block {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 }

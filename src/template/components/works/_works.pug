@@ -1,74 +1,29 @@
 section.works#works
-    .container
-        h2.works__title [ Работы ]
-        .works__content 
-            article.works__example 
-                .works__picture
-                    img(src="./img/example/smart-home.webp", width="265", height="146" alt="Site MiMi smart company")
-                .works__info 
-                    h3.works__name  
-                        | Интерактивный сайт с решениями для "умного" дома
-                    p.works__descr 
-                        | Промо сайт предоставляющий услуги для "умного" дома.
-                    .works__details 
-                        .works__box
-                            svg(class="works__icon" width="16" height="16")
-                                use(xlink:href="./icons/sprite.svg#stack--github")
-                        a.works__link(href="https://github.com/Alexander-Shulginov/Smart-Home-website-src" target="blank") Исходный код
-                        a.works__visit-link(href="https://alexander-shulginov.github.io/Smart-Home-website/" target="blank") Посетить
-            article.works__example 
-                .works__picture
-                    img(src="./img/example/doom.webp", width="265", height="146" alt="DOOM fan site")
-                .works__info 
-                    h3.works__name  
-                        | Фан сайт по игре DOOM
-                    p.works__descr 
-                        | Прогрессивный сайт с информацией о DOOM 2016
-                    .works__details 
-                        .works__box
-                            svg(class="works__icon" width="16" height="16")
-                                use(xlink:href="./icons/sprite.svg#stack--github")
-                        a.works__link(href="https://github.com/Alexander-Shulginov/DOOM-src" target="blank") Исходный код
-                        a.works__visit-link(href="https://alexander-shulginov.github.io/DOOM/" target="blank") Посетить
-            article.works__example 
-                .works__picture
-                    img(src="./img/example/rmc.webp", width="265", height="146" alt="Site design agency RMC")
-                .works__info 
-                    h3.works__name  
-                        | Лендинг дизайнерского агенства
-                    p.works__descr 
-                        | Минималистичный сайт дизайнерского агентства RMC, выполненный в сдержанных темных тонах.
-                    .works__details 
-                        .works__box
-                            svg(class="works__icon" width="16" height="16")
-                                use(xlink:href="./icons/sprite.svg#stack--github")
-                        a.works__link(href="https://github.com/Alexander-Shulginov/RMC-website-src" target="blank") Исходный код
-                        a.works__visit-link(href="https://alexander-shulginov.github.io/RMC-website/" target="blank") Посетить
-            article.works__example 
-                .works__picture
-                    img(src="./img/example/roslogistic.webp", width="265", height="146" alt="Site roslogistic company")
-                .works__info 
-                    h3.works__name 
-                        | Сайт логистической компании
-                    p.works__descr 
-                        | Современный сайт выполненный в легких, светлых тонах. 
-                    .works__details 
-                        .works__box
-                            svg(class="works__icon" width="16" height="16")
-                                use(xlink:href="./icons/sprite.svg#stack--github")
-                        a.works__link(href="https://github.com/Alexander-Shulginov/RosLogistic-website-src" target="blank") Исходный код
-                        a.works__visit-link(href="https://alexander-shulginov.github.io/RosLogistic-website/" target="blank") Посетить
-            article.works__example 
-                .works__picture
-                    img(src="./img/example/ghtress.webp", width="265", height="146" alt="Site gthress company")
-                .works__info 
-                    h3.works__name  
-                        | Сайт транспортной компании
-                    p.works__descr 
-                        | Многостраничный  сайт крупной логистической компании.
-                    .works__details 
-                        .works__box
-                            svg(class="works__icon" width="16" height="16")
-                                use(xlink:href="./icons/sprite.svg#stack--github")
-                        a.works__link(href="https://github.com/Alexander-Shulginov/Gthress-website-src" target="blank") Исходный код
-                        a.works__visit-link(href="https://alexander-shulginov.github.io/Gthress-website/" target="blank") Посетить
+	.container
+		h2.works__title [ Работы ]
+		.works__wrapper 
+			section.works__item 
+				.works__img 
+					img(src="./img/example/rmc.webp" alt="Rmc template")
+				.works__content 	
+					p.works__type Landing page 
+					h3.works__name Lux Trip 
+					p.works__descr Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem provident error accusantium iure voluptates quaerat, aut corporis?
+					.works__tech 
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--scss")
+
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--pug")
+
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--gulp")
+					.works__block 
+						a.works__visit(href="#") Посетить
+						a(href="#" target="_blank")
+						svg(class="" width="34" height="34")
+							use(xlink:href="./icons/sprite.svg#stack--github")
+
