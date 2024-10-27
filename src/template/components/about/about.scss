@@ -31,13 +31,6 @@
 		line-height: $line-height-base;
 		color: $color-light;
 
-		opacity: 0;
-
-		transition: opacity 0.5s ease-in-out;
-		&--active {
-			opacity: 1;
-		}
-
 		@media (max-width: 768px) {
 			margin-bottom: 38px;
 		}

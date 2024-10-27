@@ -1,40 +1,34 @@
 .hero {
-	padding: clamp-px(70, 150) 0;
-	background: $bg-hero;
+	padding: clamp-px(70, 120) 0;
 
 	&__inner {
 		display: flex;
+		gap: clamp-px(20, 45);
 		align-items: center;
 		justify-content: space-between;
-		gap: clamp-px(20, 45);
 	}
 
 	&__descr {
 		font-family: $main-font;
-		color: $color-base;
 		font-size: clamp-px(26, 42);
 		font-weight: 500;
-		opacity: 0;
-		transform: translateX(-40%);
-		transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-
-		&--active {
-			transform: translateX(1%);
-			opacity: 1;
-		}
+		color: $color-base;
 	}
 
-	&__descr--accent {
-		color: $color-accent;
+	&__descr--front {
+		color: #fbc02d;
+	}
+
+	&__descr--html {
+		color: #0f7dff;
 	}
 
 	&__photo {
 		max-width: 320px;
-		opacity: 0;
-		transition: opacity 0.4s ease-in-out;
 
-		&--active {
-			opacity: 1;
-		}
+		background-color: $bg-dark;
+		border: 2px solid $bg-light;
+		border-radius: $radius-base;
+		box-shadow: 5px 5px 0 0 $bg-light;
 	}
 }

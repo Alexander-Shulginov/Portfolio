@@ -5,38 +5,30 @@
 		}
 
 		&__nav {
-			visibility: hidden;
 			position: absolute;
 			z-index: 10;
-			top: -500%;
-			left: 0;
+			top: 200%;
 			right: 0;
-			background-color: $color-accent;
+			left: 0;
+
 			width: 100%;
-			transition: top 0.3s ease-in-out, visibility .3s ease-in-out;
-			&::after {
-				content: "";
-				position: absolute;
-				top: -29px;
-				left: 50%;
-				transform: translateX(-50%);
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 0 30px 30px 30px;
-				border-color: transparent transparent $color-accent transparent;
-			}
+
+			visibility: hidden;
+			opacity: 0;
+			background-color: $bg-dark;
+
+			transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
 		}
 
 		&__nav--active {
 			visibility: visible;
-			top: 185%;
+			opacity: 1;
 		}
 
 		&__list {
 			display: flex;
 			flex-direction: column;
-			padding: 80px 0;
+			padding: 40px 0;
 		}
 
 		&__item {

@@ -1,16 +1,15 @@
+/* stylelint-disable no-descending-specificity */
 .header {
-	padding: 12px 0;
-	background-color: $color-accent;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	left: 0;
 
-	&__logo {
-		transition: transform 0.2s ease-in-out;
+	padding: 16px 0;
 
-		@media (any-hover: hover) {
-			&:hover {
-				transform: scale(1.1);
-			}
-		}
-	}
+	background-color: $bg-dark;
+	border-bottom: 1px solid $color-light;
 
 	&__inner {
 		position: relative;
@@ -21,15 +20,21 @@
 
 	&__list {
 		display: flex;
-		gap: clamp-px(30, 50);
+		gap: 24px;
 		align-items: center;
 	}
 
 	&__item {
 		font-family: $second-font;
-		font-size: clamp-px(20, 24);
+		font-size: 18px;
 		font-weight: 500;
 		color: $color-base;
+	}
+
+	&__links {
+		display: flex;
+		gap: 14px;
+		align-items: center;
 	}
 
 	&__link {
@@ -41,7 +46,7 @@
 
 		display: none;
 		flex-direction: column;
-		gap: 13px;
+		gap: 7px;
 		align-items: center;
 		justify-content: center;
 
@@ -53,7 +58,7 @@
 	&__burger--active {
 		position: relative;
 		z-index: 22;
-		gap: 15px;
+		gap: 8.6px;
 		transition: all 0.3s linear;
 
 		.header__burger-line:nth-child(1) {
@@ -78,7 +83,7 @@
 
 		display: block;
 
-		width: 50px;
+		width: 34px;
 		height: 3px;
 
 		background-color: $color-base;
