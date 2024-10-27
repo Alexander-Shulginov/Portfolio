@@ -1,29 +1,32 @@
 section.works#works
 	.container
-		h2.works__title [ Работы ]
+		h2.works__title Работы
 		.works__wrapper 
-			section.works__item 
-				.works__img 
-					img(src="./img/example/rmc.webp" alt="Rmc template")
-				.works__content 	
-					p.works__type Landing page 
-					h3.works__name Lux Trip 
-					p.works__descr Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem provident error accusantium iure voluptates quaerat, aut corporis?
-					.works__tech 
-						.works__icon
-							svg(width="34" height="34")
-								use(xlink:href="./icons/sprite.svg#stack--scss")
+			- for(var i = 0; i < 6; i++)
+				section.works__item 
+					.works__img 
+						img(src="./img/example/rmc.webp" alt="Rmc template")
+					.works__content 	
+						.works__top
+							p.works__type Landing page 
+							h3.works__name Lux Trip 
+						p.works__descr Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem provident error accusantium iure voluptates quaerat, aut corporis?
+						.works__tech 
 
-						.works__icon
-							svg(width="34" height="34")
-								use(xlink:href="./icons/sprite.svg#stack--pug")
+							.works__icon
+								svg(width="34" height="34")
+									use(xlink:href="./icons/sprite.svg#stack--pug")
 
-						.works__icon
-							svg(width="34" height="34")
-								use(xlink:href="./icons/sprite.svg#stack--gulp")
-					.works__block 
-						a.works__visit(href="#") Посетить
-						a(href="#" target="_blank")
-						svg(class="" width="34" height="34")
-							use(xlink:href="./icons/sprite.svg#stack--github")
+							.works__icon
+								svg(width="34" height="34")
+									use(xlink:href="./icons/sprite.svg#stack--scss")
+
+							.works__icon
+								svg(width="34" height="34")
+									use(xlink:href="./icons/sprite.svg#stack--gulp")
+						.works__block 
+							a.works__visit(href="#") Посетить
+							a(href="#" target="_blank")
+								svg(width="34" height="34")
+									use(xlink:href="./icons/sprite.svg#stack--github")
 
