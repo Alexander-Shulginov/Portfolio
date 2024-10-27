@@ -1,26 +1,22 @@
 .about {
 	padding: clamp-px(60, 120) 0;
-	background: $bg-works;
+	background: $bg-dark;
 
 	&__title {
-		@extend %title-style;
-
-		position: relative;
-		margin-bottom: clamp-px(25, 40);
+		margin-bottom: 34px;
+		font-size: $fz-title-section;
+		color: $color-light;
 		text-align: center;
-		&::after {
-			content: "";
 
-			position: absolute;
-			bottom: -7px;
-			left: 50%;
-			transform: translateX(-50%);
-
-			width: 92px;
-			height: 2px;
-
-			background-color: $color-base;
+		@media (max-width: 768px) {
+			margin-bottom: 22px;
+			font-size: $fz-title-secion-mobile;
 		}
+	}
+
+	&__inner {
+		max-width: 700px;
+		margin: 0 auto;
 	}
 
 	&__content {
@@ -28,22 +24,57 @@
 		flex-direction: column;
 		gap: 10px;
 
-		max-width: 900px;
-		margin: 0 auto;
+		margin-bottom: 88px;
+
+		font-family: $main-font;
+		font-size: clamp-px(16, 20);
+		line-height: $line-height-base;
+		color: $color-light;
 
 		opacity: 0;
 
 		transition: opacity 0.5s ease-in-out;
-
 		&--active {
 			opacity: 1;
 		}
+
+		@media (max-width: 768px) {
+			margin-bottom: 38px;
+		}
 	}
 
-	&__text {
-		font-family: $main-font;
-		font-size: clamp-px(16, 20);
-		line-height: $line-height-base;
-		color: $color-base;
+	&__info {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: $color-light;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	&__key {
+		font-size: 56px;
+		font-weight: 700;
+		svg {
+			transform: translateY(10px);
+		}
+
+		@media (max-width: 768px) {
+			font-size: 32px;
+			svg {
+				transform: translateY(6px);
+			}
+		}
+	}
+
+	&__svg {
+		@media (max-width: 768px) {
+			width: 46px;
+			height: 30px;
+		}
 	}
 }
