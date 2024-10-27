@@ -54,5 +54,8 @@
 		"w3c-html-validator": "^1.5.1",
 		"webpack": "^5.89.0",
 		"webpack-stream": "^7.0.0"
+	},
+	"dependencies": {
+		"caniuse-lite": "^1.0.30001672"
 	}
 }
