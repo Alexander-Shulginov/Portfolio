@@ -2,31 +2,146 @@ section.works#works
 	.container
 		h2.works__title Работы
 		.works__wrapper 
-			- for(var i = 0; i < 6; i++)
-				section.works__item 
-					.works__img 
-						img(src="./img/example/rmc.webp" alt="Rmc template")
-					.works__content 	
-						.works__top
-							p.works__type Landing page 
-							h3.works__name Lux Trip 
-						p.works__descr Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem provident error accusantium iure voluptates quaerat, aut corporis?
-						.works__tech 
+			section.works__item 
+				.works__img 
+					img(src="./img/example/luxtrips.webp" alt="Rmc template")
+				.works__content 	
+					.works__top
+						p.works__type Landing page 
+						h3.works__name Lux Trips
+					p.works__descr Необычайно красивый лендинг для туристического сервиса.
+					.works__tech 
 
-							.works__icon
-								svg(width="34" height="34")
-									use(xlink:href="./icons/sprite.svg#stack--pug")
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--pug")
 
-							.works__icon
-								svg(width="34" height="34")
-									use(xlink:href="./icons/sprite.svg#stack--scss")
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--scss")
 
-							.works__icon
-								svg(width="34" height="34")
-									use(xlink:href="./icons/sprite.svg#stack--gulp")
-						.works__block 
-							a.works__visit(href="#") Посетить
-							a(href="#" target="_blank")
-								svg(width="34" height="34")
-									use(xlink:href="./icons/sprite.svg#stack--github")
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--gulp")
+					.works__block 
+						a.works__visit(href="#") Посетить
+						a(href="#" target="_blank")
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--github")
+
+			section.works__item 
+				.works__img 
+					img(src="./img/example/v-notes.webp" alt="Rmc template")
+				.works__content 	
+					.works__top
+						p.works__type SPA
+						h3.works__name V-Notes
+					p.works__descr SPA-приложение для работы с личными заметками.
+					.works__tech 
+
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--vue")
+
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--ts")
+
+
+					.works__block 
+						a.works__visit(href="#") Посетить
+						a(href="#" target="_blank")
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--github")
+
+			section.works__item 
+				.works__img 
+					img(src="./img/example/form.webp" alt="Rmc template")
+				.works__content 	
+					.works__top
+						p.works__type Authorization
+						h3.works__name Neomorphism form
+					p.works__descr Форма авторизации выполненная в стиле неоморфизм.
+					.works__tech 
+
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--ts")
+
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--webpack")
+
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--html")
+
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--css")
+
+
+					.works__block 
+						a.works__visit(href="#") Посетить
+						a(href="#" target="_blank")
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--github")
+
+			section.works__item 
+				.works__img 
+					img(src="./img/example/smart-home.webp" alt="Rmc template")
+				.works__content 	
+					.works__top
+						p.works__type Landing page
+						h3.works__name Smart-Home
+					p.works__descr Промо сайт предоставляющий услуги для "умного" дома.
+					.works__tech 
+
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--html")
+
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--scss")
+
+						.works__icon
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--js")
+
+
+					.works__block 
+						a.works__visit(href="#") Посетить
+						a(href="#" target="_blank")
+							svg(width="34" height="34")
+								use(xlink:href="./icons/sprite.svg#stack--github")
+
+
+			//- - for(var i = 0; i < 6; i++)
+			//- 	section.works__item 
+			//- 		.works__img 
+			//- 			img(src="./img/example/rmc.webp" alt="Rmc template")
+			//- 		.works__content 	
+			//- 			.works__top
+			//- 				p.works__type Landing page 
+			//- 				h3.works__name Lux Trip 
+			//- 			p.works__descr Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem provident error accusantium iure voluptates quaerat, aut corporis?
+			//- 			.works__tech 
+
+			//- 				.works__icon
+			//- 					svg(width="34" height="34")
+			//- 						use(xlink:href="./icons/sprite.svg#stack--pug")
+
+			//- 				.works__icon
+			//- 					svg(width="34" height="34")
+			//- 						use(xlink:href="./icons/sprite.svg#stack--scss")
+
+			//- 				.works__icon
+			//- 					svg(width="34" height="34")
+			//- 						use(xlink:href="./icons/sprite.svg#stack--gulp")
+			//- 			.works__block 
+			//- 				a.works__visit(href="#") Посетить
+			//- 				a(href="#" target="_blank")
+			//- 					svg(width="34" height="34")
+			//- 						use(xlink:href="./icons/sprite.svg#stack--github")
 
