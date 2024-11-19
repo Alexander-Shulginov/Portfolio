@@ -1,3 +1,3 @@
-import burgeMenu from './burger';
+import burgeMenuInit from './burger';
 
-burgeMenu();
+burgeMenuInit();

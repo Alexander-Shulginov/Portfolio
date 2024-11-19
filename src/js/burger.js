@@ -1,4 +1,4 @@
-const burgeMenu = () => {
+const burgeMenuInit = () => {
 	const burgerBtn = document.querySelector('.header__burger');
 	const burgeMenu = document.querySelector('.header__nav');
 
@@ -17,6 +17,7 @@ const burgeMenu = () => {
 		if (event.target.classList.contains(cssLinkClass)) {
 			burgerBtn.classList.remove(cssActiveClass);
 			burgeMenu.classList.remove(cssActiveMenuClass);
+			document.body.classList.remove(cssBodyActiveClass);
 		}
 	});
 
@@ -32,4 +33,4 @@ const burgeMenu = () => {
 	});
 };
 
-export default burgeMenu;
+export default burgeMenuInit;

@@ -63,7 +63,9 @@
 			aspect-ratio: 16 / 9;
 			width: 100%;
 			max-width: unset;
+
 			object-fit: cover;
+			border-radius: 6px;
 		}
 	}
 
@@ -93,38 +95,98 @@
 	}
 
 	&__descr {
-		margin-bottom: 4px;
+		margin-bottom: 8px;
 	}
 
 	&__tech {
 		display: flex;
 		gap: 12px;
 		align-items: center;
+		margin-bottom: 20px;
 	}
 
 	&__icon {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		@media (any-hover: hover) {
+			&:hover {
+				.works__tooltip {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__tooltip {
+		position: absolute;
+		bottom: -23px;
+
+		padding: 1px 10px;
+
+		font-size: 10px;
+
+		opacity: 0;
+		background-color: rgba(255, 255, 255, 0.3);
+		border-radius: 4px;
+
+		transition: opacity 0.3s ease-in-out;
+
+		&::after {
+			content: "";
+
+			position: absolute;
+			top: -4.5px;
+			left: 50%;
+			transform: rotate(0deg) translateX(-50%);
+
+			width: 0px;
+			height: 0px;
+
+			border-color: transparent transparent rgba(255, 255, 255, 0.3)
+				transparent;
+			border-style: solid;
+			border-width: 0 6px 5px 6px;
+		}
 	}
 
 	&__visit {
+		cursor: pointer;
+
 		position: relative;
-		text-decoration: underline;
+
+		padding: 9px 16px;
+		padding-right: 32px;
+
+		color: $bg-dark;
+
+		background-color: $color-light;
+		border-radius: 6px;
+
+		transition: opacity 0.3s ease-in-out;
 		&::after {
 			@include bg-svg("social--go-to");
 
 			content: "";
 
 			position: absolute;
-			right: -22px;
-			bottom: 1px;
+			top: 50%;
+			right: 10px;
+			transform: translateY(-50%) scale(0.9);
 
 			width: 16px;
 			height: 16px;
 
 			background-repeat: no-repeat;
 			background-size: 16px;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.8;
+			}
 		}
 	}
 
