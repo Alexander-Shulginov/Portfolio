@@ -56,6 +56,7 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
-		"caniuse-lite": "^1.0.30001672"
+		"caniuse-lite": "^1.0.30001672",
+		"gsap": "^3.12.5"
 	}
 }
