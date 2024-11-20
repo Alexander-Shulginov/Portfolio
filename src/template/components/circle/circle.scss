@@ -1,0 +1,86 @@
+.circle {
+	position: relative;
+	overflow: hidden;
+
+	&__wrapper {
+		position: relative;
+		overflow: hidden;
+		height: 500px; //? why 500?
+		margin-bottom: 50px;
+	}
+
+	&__figure {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+
+		margin: 0 auto;
+
+		border: 2px solid $color-light;
+		border-radius: 50%;
+	}
+
+	&__figure--row-1 {
+		top: 156px;
+		width: 800px;
+		height: 800px;
+	}
+
+	&__figure--row-2 {
+		top: 76px;
+		width: 900px;
+		height: 900px;
+	}
+
+	&__figure--row-3 {
+		width: 1000px;
+		height: 1000px;
+	}
+
+	&__figure-inner {
+		position: relative;
+	}
+
+	&__item {
+		display: inline-flex; //!
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		margin-right: 16px; //!
+
+		background-color: $bg-dark;
+		border: 2px solid $bg-light;
+		border-radius: $radius-base;
+		box-shadow: 2px 2px 0 0 $bg-light;
+	}
+
+	&__item--row-1 {
+		gap: 4px;
+		width: 90px;
+		height: 90px;
+		padding: 10px;
+	}
+
+	&__item--row-2 {
+		gap: 4px;
+		width: 90px;
+		height: 90px;
+		padding: 10px;
+	}
+
+	&__item--row-3 {
+		gap: 4px;
+		width: 90px;
+		height: 90px;
+		padding: 10px;
+	}
+
+	&__icon {
+		flex-shrink: 0;
+	}
+
+	&__tech-name {
+		color: $color-light;
+	}
+}

@@ -12,7 +12,18 @@ gsap.to('.ss', {
 		trigger: '.skills',
 		start: '50% 100%',
 		scrub: true,
-		markers: true,
+		// markers: true,
+	},
+
+	rotate: 40,
+});
+
+gsap.from('.dd', {
+	scrollTrigger: {
+		trigger: '.skills',
+		start: '50% 100%',
+		scrub: true,
+		// markers: true,
 	},
 
 	rotate: 40,
