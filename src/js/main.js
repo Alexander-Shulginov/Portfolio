@@ -7,24 +7,26 @@ burgeMenuInit();
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to('.ss', {
+gsap.to('.circle__items', {
 	scrollTrigger: {
 		trigger: '.skills',
-		start: '50% 100%',
+		start: '-80%',
+		end: '100%',
 		scrub: true,
-		// markers: true,
+		markers: true,
 	},
 
-	rotate: 40,
+	rotate: 15,
 });
 
-gsap.from('.dd', {
+gsap.to('.circle__item', {
 	scrollTrigger: {
 		trigger: '.skills',
-		start: '50% 100%',
+		start: '-80%',
+		end: '100%',
 		scrub: true,
 		// markers: true,
 	},
 
-	rotate: 40,
+	rotate: -15,
 });

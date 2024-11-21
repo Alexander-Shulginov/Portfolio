@@ -1,54 +1,52 @@
 .circle {
 	position: relative;
+	// position: relative;
+
 	overflow: hidden;
+	max-width: 1100px;
+	margin: 0 auto;
+	&::after {
+		content: "";
+	}
 
 	&__wrapper {
 		position: relative;
+
 		overflow: hidden;
 		height: 500px; //? why 500?
+		margin: 0 auto;
 		margin-bottom: 50px;
 	}
 
-	&__figure {
-		position: absolute;
-		top: 0%;
-		left: 50%;
-		transform: translateX(-50%);
+	&__items {
+		height: 1095px;
+		display: flex;
+		justify-content: space-between;
+	}
 
-		margin: 0 auto;
+	&__arc--3 {
+		position: absolute;
+		z-index: 0;
+		top: 43px;
+		left: 0;
+
+		display: block;
+
+		width: 100%;
+		height: 1095px;
 
 		border: 2px solid $color-light;
 		border-radius: 50%;
 	}
 
-	&__figure--row-1 {
-		top: 200px;
-		width: 71%;
-		height: 1200px;
-	}
-	
-	&__figure--row-2 {
-		top: 100px;
-		width: 86%;
-		height: 1200px;
-	}
-
-	&__figure--row-3 {
-		width: 100%;
-		height: 1200px;
-	}
-
-	&__figure-inner {
-		position: relative;
-	}
-
 	&__item {
-		display: inline-flex; //!
+		position: relative;
+		z-index: 1;
+
+		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-
-		margin-right: 16px; //!
 
 		background-color: $bg-dark;
 		border: 2px solid $bg-light;
@@ -77,10 +75,20 @@
 		padding: 10px;
 	}
 
-	&__item--webpack {
-		position: absolute;
-		top: 251px;
-		left: 1%;
+	&__item--row-3:nth-child(3) {
+		margin: 0 120px;
+	}
+
+	&__item--row-3:nth-child(2),
+	&__item--row-3:nth-child(4) {
+		position: relative;
+		top: 86px;
+	}
+
+	&__item--row-3:nth-child(1),
+	&__item--row-3:nth-child(5) {
+		position: relative;
+		top: 289px;
 	}
 
 	&__icon {
