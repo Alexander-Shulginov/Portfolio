@@ -31,6 +31,29 @@ function initGsap() {
 
 		rotate: -15,
 	});
+	gsap.to('.circle__items--2', {
+		scrollTrigger: {
+			trigger: '.skills',
+			start: '-80%',
+			end: '100%',
+			scrub: true,
+			markers: true,
+		},
+
+		rotate: -25,
+	});
+
+	gsap.to('.circle__item--row-2', {
+		scrollTrigger: {
+			trigger: '.skills',
+			start: '-80%',
+			end: '100%',
+			scrub: true,
+			// markers: true,
+		},
+
+		rotate: 25,
+	});
 
 	gsap.to('.circle__items--1', {
 		scrollTrigger: {
