@@ -14,10 +14,10 @@ function initGsap() {
 			start: '-80%',
 			end: '100%',
 			scrub: true,
-			markers: true,
+			// markers: true,
 		},
 
-		rotate: 10,
+		rotate: 5,
 	});
 
 	gsap.to('.circle__item--row-3', {
@@ -29,19 +29,19 @@ function initGsap() {
 			// markers: true,
 		},
 
-		rotate: -10,
+		rotate: -5,
 	});
 
-	gsap.to('.circle__items--2', {
+	gsap.to('.circle__elements--2', {
 		scrollTrigger: {
 			trigger: '.skills',
 			start: '-80%',
 			end: '100%',
 			scrub: true,
-			markers: true,
+			// markers: true,
 		},
 
-		rotate: -25,
+		rotate: -3,
 	});
 
 	gsap.to('.circle__item--row-2', {
@@ -53,31 +53,7 @@ function initGsap() {
 			// markers: true,
 		},
 
-		rotate: 25,
-	});
-
-	gsap.to('.circle__items--1', {
-		scrollTrigger: {
-			trigger: '.skills',
-			start: '-80%',
-			end: '100%',
-			scrub: true,
-			markers: true,
-		},
-
-		rotate: 10,
-	});
-
-	gsap.to('.circle__item--row-1', {
-		scrollTrigger: {
-			trigger: '.skills',
-			start: '-80%',
-			end: '100%',
-			scrub: true,
-			// markers: true,
-		},
-
-		rotate: -10,
+		rotate: 3,
 	});
 }
 
