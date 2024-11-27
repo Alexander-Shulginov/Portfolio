@@ -1,18 +1,11 @@
 .circle {
 	position: relative;
-	// position: relative;
-
 	overflow: hidden;
 	max-width: 1100px;
 	margin: 0 auto;
 
 	&__wrapper {
 		position: relative;
-
-		// overflow: hidden;
-		// display: flex;
-		// justify-content: center;
-
 		height: 500px; //? why 500?
 		margin: 0 auto;
 		margin-bottom: 50px;
@@ -24,17 +17,18 @@
 		transform: translateX(-50%);
 
 		display: flex;
-		justify-content: space-between;
+		justify-content:center;
 	}
 
 	&__items--1 {
-		position: absolute;
-		top: 292px;
-		left: 50%;
-		transform: translateX(-50%);
-
-		height: 408px;
-		width: 43%;
+		// position: absolute;
+		// top: 300px;
+		// left: 50%;
+		// transform: translateX(-50%);
+		top: -72px;
+		// width: 100%;
+				width: 120%;
+		height: 800px;
 	}
 
 	&__items--2 {
@@ -42,9 +36,11 @@
 		top: 136px;
 		left: 50%;
 		transform: translateX(-50%);
-		height: 600px;
+
+		gap: 80px;
 
 		width: 73%;
+		height: 600px;
 	}
 
 	&__items--3 {
@@ -52,6 +48,15 @@
 		height: 1095px;
 	}
 
+	&__elements {
+		display: flex;
+		gap: 100px;
+		justify-content: space-between;
+		height: 408px;
+	}
+
+	&__elements--1 {
+	}
 	&__arc {
 		position: absolute;
 		z-index: 0;
@@ -63,20 +68,20 @@
 	}
 
 	&__arc--1 {
-		top: 331px;
-		width: 47%;
-		height: 647px;
+		top: 370px;
+		width: 120%;
+		height: 800px;
 	}
 
 	&__arc--2 {
 		top: 182px;
-		width: 66%;
+		width: 110%;
 		height: 807px;
 	}
 
 	&__arc--3 {
 		top: 43px;
-		width: 93%;
+		width: 135%;
 		height: 1095px;
 	}
 
@@ -97,16 +102,16 @@
 	}
 
 	&__item--row-1 {
-		gap: 4px;
-		width: 90px;
-		height: 90px;
+		gap: 10px;
+		width: 130px;
+		height: 130px;
 		padding: 10px;
 	}
 
 	&__item--row-2 {
 		gap: 4px;
-		width: 90px;
-		height: 90px;
+		width: 105px;
+		height: 105px;
 		padding: 10px;
 	}
 
@@ -120,39 +125,36 @@
 	&__item--row-1:nth-child(1),
 	&__item--row-1:nth-child(3) {
 		position: relative;
-		top: 86px;
-	}
-
-	&__item--row-2:nth-child(3) {
-		margin: 0 120px;
+		top: 45px;
+		transform: scale(0.95);
 	}
 
 	&__item--row-2:nth-child(2),
-	&__item--row-2:nth-child(4) {
+	&__item--row-2:nth-child(3) {
 		position: relative;
-		top: 86px;
+		top: 33px;
 	}
 
 	&__item--row-2:nth-child(1),
-	&__item--row-2:nth-child(5) {
+	&__item--row-2:nth-child(4) {
 		position: relative;
-		top: 289px;
+		top: 76px;
 	}
 
 	&__item--row-3:nth-child(3) {
-		margin: 0 120px;
+		margin: 0 30px;
 	}
 
 	&__item--row-3:nth-child(2),
 	&__item--row-3:nth-child(4) {
 		position: relative;
-		top: 86px;
+		top: 33px;
 	}
 
 	&__item--row-3:nth-child(1),
 	&__item--row-3:nth-child(5) {
 		position: relative;
-		top: 289px;
+		top: 110px;
 	}
 
 	&__icon {

@@ -17,7 +17,7 @@ function initGsap() {
 			markers: true,
 		},
 
-		rotate: 15,
+		rotate: 10,
 	});
 
 	gsap.to('.circle__item--row-3', {
@@ -29,8 +29,9 @@ function initGsap() {
 			// markers: true,
 		},
 
-		rotate: -15,
+		rotate: -10,
 	});
+
 	gsap.to('.circle__items--2', {
 		scrollTrigger: {
 			trigger: '.skills',
@@ -64,7 +65,7 @@ function initGsap() {
 			markers: true,
 		},
 
-		rotate: 25,
+		rotate: 10,
 	});
 
 	gsap.to('.circle__item--row-1', {
@@ -76,7 +77,7 @@ function initGsap() {
 			// markers: true,
 		},
 
-		rotate: -25,
+		rotate: -10,
 	});
 }
 
