@@ -1,11 +1,15 @@
 .hero {
-	padding: clamp-px(70, 120) 0;
+	padding: 180px 0;
 
 	&__inner {
 		display: flex;
-		gap: clamp-px(20, 45);
+		gap: 24px;
 		align-items: center;
 		justify-content: space-between;
+
+		@media (max-width: 600px) {
+			flex-direction: column;
+		}
 	}
 
 	&__descr {
@@ -28,15 +32,37 @@
 
 		aspect-ratio: 1 / 1;
 		width: 310px;
+		margin-right: 26px;
 
 		background-color: $bg-dark;
-		background-image: url(../img/photo@3x.webp);
-		background-repeat: no-repeat;
-		background-position-x: center;
-		background-position-y: 40px;
-		background-size: cover;
-		border: 2px solid $bg-light;
+		border: 3px solid $bg-light;
 		border-radius: $radius-base;
 		box-shadow: 5px 5px 0 0 $bg-light;
+
+		img {
+			transform: translateY(41px);
+
+			@media (max-width: 600px) {
+				transform: translateY(21px);
+			}
+		}
+
+		@media (max-width: 960px) {
+			width: 260px;
+			margin-right: 20px;
+		}
+
+		@media (max-width: 768px) {
+			width: 200px;
+			margin-right: 10px;
+		}
+	}
+
+	@media (max-width: 960px) {
+		padding: 120px 0;
+	}
+
+	@media (max-width: 768px) {
+		padding: 100px 0;
 	}
 }
