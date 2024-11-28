@@ -8,52 +8,25 @@ burgeMenuInit();
 gsap.registerPlugin(ScrollTrigger);
 
 function initGsap() {
-	gsap.to('.circle__items--3', {
-		scrollTrigger: {
-			trigger: '.skills',
-			start: '-80%',
-			end: '100%',
-			scrub: true,
-			// markers: true,
-		},
+	const scrollTriggerSettings = {
+		trigger: '.skills',
+		start: '-80%',
+		end: '100%',
+		scrub: true,
+	};
 
-		rotate: 5,
-	});
+	const animations = [
+		{ selector: '.circle__items--3', rotate: 5 },
+		{ selector: '.circle__item--row-3', rotate: -5 },
+		{ selector: '.circle__elements--2', rotate: -3 },
+		{ selector: '.circle__item--row-2', rotate: 3 },
+	];
 
-	gsap.to('.circle__item--row-3', {
-		scrollTrigger: {
-			trigger: '.skills',
-			start: '-80%',
-			end: '100%',
-			scrub: true,
-			// markers: true,
-		},
-
-		rotate: -5,
-	});
-
-	gsap.to('.circle__elements--2', {
-		scrollTrigger: {
-			trigger: '.skills',
-			start: '-80%',
-			end: '100%',
-			scrub: true,
-			// markers: true,
-		},
-
-		rotate: -3,
-	});
-
-	gsap.to('.circle__item--row-2', {
-		scrollTrigger: {
-			trigger: '.skills',
-			start: '-80%',
-			end: '100%',
-			scrub: true,
-			// markers: true,
-		},
-
-		rotate: 3,
+	animations.forEach(({ selector, rotate }) => {
+		gsap.to(selector, {
+			scrollTrigger: scrollTriggerSettings,
+			rotate,
+		});
 	});
 }
 
