@@ -12,4 +12,51 @@
 			font-size: $fz-title-secion-mobile;
 		}
 	}
+
+	&__details {
+		display: flex;
+		flex-direction: column;
+		gap: 36px;
+	}
+
+	&__name {
+		position: relative;
+
+		padding: 12px 24px;
+
+		font-size: 26px;
+		font-weight: 700;
+		color: $color-light;
+		text-align: center;
+		&::after {
+			content: "";
+
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			transform: skew(-25deg);
+
+			background-color: $bg-dark;
+			border: 2px solid $color-light;
+			border-radius: 10px;
+			box-shadow: 2px 3px 0 1px $bg-light;
+		}
+
+		@media (max-width: 768px) {
+			font-size: 18px;
+		}
+	}
+
+	&__info {
+		padding-left: 12px;
+		font-size: 18px;
+		font-weight: 400;
+		color: $color-light;
+		li {
+			list-style-type: disc;
+		}
+	}
 }
