@@ -24,9 +24,17 @@
 	}
 
 	&__photo {
-		max-width: 320px;
+		overflow: hidden;
+
+		aspect-ratio: 1 / 1;
+		width: 310px;
 
 		background-color: $bg-dark;
+		background-image: url(../img/photo@3x.webp);
+		background-repeat: no-repeat;
+		background-position-x: center;
+		background-position-y: 40px;
+		background-size: cover;
 		border: 2px solid $bg-light;
 		border-radius: $radius-base;
 		box-shadow: 5px 5px 0 0 $bg-light;
