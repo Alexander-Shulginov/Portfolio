@@ -45,7 +45,6 @@ button,
 input,
 textarea,
 select {
-	outline: none;
 	&:focus-within {
 		border-radius: 1px;
 		outline: 2px solid $color-light;
