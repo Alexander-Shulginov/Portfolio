@@ -6,7 +6,7 @@
 	right: 0;
 	left: 0;
 
-	padding: 16px 0;
+	padding: 18px 0;
 
 	background-color: $bg-dark;
 	border-bottom: 1px solid $color-light;
@@ -38,6 +38,9 @@
 	}
 
 	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		@extend %hover-style;
 	}
 
