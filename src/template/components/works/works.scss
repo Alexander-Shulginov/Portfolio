@@ -1,21 +1,21 @@
 .works {
-	padding-bottom: 3rem;
+	padding-bottom: 150px;
 
 	&__title {
-		margin-bottom: 34px;
+		margin-bottom: 56px;
 		font-size: $fz-title-section;
 		color: $color-light;
 		text-align: center;
 
 		@media (max-width: 768px) {
-			margin-bottom: 22px;
+			margin-bottom: 32px;
 			font-size: $fz-title-secion-mobile;
 		}
 	}
 
 	&__wrapper {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 1fr);
 		gap: 44px;
 
 		@media (max-width: 768px) {
@@ -27,10 +27,9 @@
 
 	&__item {
 		display: flex;
-		flex-direction: column;
 		gap: $gap-base;
 
-		padding: 40px 30px;
+		padding: 30px;
 
 		color: $color-light;
 
@@ -40,31 +39,27 @@
 		box-shadow: 5px 5px 0 0 $bg-light;
 
 		@media (max-width: 768px) {
+			flex-direction: column;
 			gap: 10px;
 			padding: 18px;
 		}
 	}
 
-	&__item:nth-child(3n + 1) {
-		grid-column: 2 span;
-		flex-direction: row;
-
-		@media (max-width: 768px) {
-			grid-column: 1;
-			flex-direction: column;
-		}
-	}
-
 	&__img {
-		flex-shrink: 0;
+		// flex-shrink: 0;
 
 		img {
 			aspect-ratio: 16 / 9;
-			width: 100%;
-			max-width: unset;
+			max-width: 335px;
+			height: 100%;
 
 			object-fit: cover;
 			border-radius: 6px;
+
+			@media (max-width: 768px) {
+				width: 100%;
+				max-width: 100%;
+			}
 		}
 	}
 
@@ -102,6 +97,10 @@
 		gap: 12px;
 		align-items: center;
 		margin-bottom: 20px;
+
+		@media (max-width: 768px){
+			margin-bottom: 14px;
+		}
 	}
 
 	&__icon {
@@ -157,7 +156,7 @@
 		position: relative;
 
 		padding: 9px 16px;
-		padding-right: 32px;
+		padding-right: 36px;
 
 		color: $bg-dark;
 
@@ -172,7 +171,7 @@
 
 			position: absolute;
 			top: 50%;
-			right: 10px;
+			right: 11px;
 			transform: translateY(-50%) scale(0.9);
 
 			width: 16px;
@@ -197,5 +196,9 @@
 
 	&__git-link {
 		height: 34px;
+	}
+
+	@media (max-width: 768px) {
+		padding-bottom: 120px;
 	}
 }

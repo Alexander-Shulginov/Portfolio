@@ -3,12 +3,12 @@ section.hero
 		.hero__inner 
 			h1.hero__descr 
 				| Привет, я Александр <br>
-				span.hero__descr.hero__descr--front 
-					| Frontend разработчик 
-				<br />
 				span.hero__descr.hero__descr--html 
 					| HTML верстальщик #{"</>"} 
+				<br />
+				span.hero__descr.hero__descr--front 
+					| Frontend разработчик 
 			.hero__photo 
 				picture 
-					source(srcset="./img/photo@2x.webp 2x, ./img/photo@3x.webp 3x" type="image/webp")
-					img(class="header__img" src="./img/photo.webp" width="379" height="387" alt="My photo")  
+					source(srcset="./img/photo@2x.webp 2x, ./img/photo@3x.webp 3x", type="image/webp")
+					img.header__img(src="./img/photo.webp", width="379", height="387", alt="My photo")  
