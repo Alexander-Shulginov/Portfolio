@@ -11,6 +11,9 @@ const burgeMenuInit = () => {
 		burgerBtn.classList.toggle(cssActiveClass);
 		burgeMenu.classList.toggle(cssActiveMenuClass);
 		document.body.classList.toggle(cssBodyActiveClass);
+		setTimeout(() => {
+			burgeMenu.focus();
+		}, 50);
 	});
 
 	burgeMenu.addEventListener('click', (event) => {

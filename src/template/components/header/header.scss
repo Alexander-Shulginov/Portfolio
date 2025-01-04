@@ -38,10 +38,11 @@
 	}
 
 	&__link {
+		@extend %hover-style;
+
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		@extend %hover-style;
 	}
 
 	&__burger {
@@ -53,6 +54,8 @@
 		align-items: center;
 		justify-content: center;
 
+		height: 26px;
+
 		background-color: transparent;
 
 		transition: all 0.3s linear;
@@ -63,6 +66,10 @@
 		z-index: 22;
 		gap: 8.6px;
 		transition: all 0.3s linear;
+		&:focus-visible,
+		&:focus {
+			outline: none;
+		}
 
 		.header__burger-line:nth-child(1) {
 			transform-origin: top right;

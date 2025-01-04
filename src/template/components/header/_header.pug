@@ -1,7 +1,7 @@
 header.header
 	.container 
 		.header__inner 
-			nav.header__nav 
+			nav.header__nav(tabindex="0") 
 				ul.header__list 
 					li.header__item 
 						a.header__link(href="#works") Работы
@@ -24,7 +24,7 @@ header.header
 				a.header__link(href="https://github.com/Alexander-Shulginov" target="_blank") 
 					svg(class="footer__icon" width="21" height="21")
 						use(xlink:href="./icons/sprite.svg#stack--github")
-			button.header__burger(type="button" aria-label="Button for burger meu") 
+			button.header__burger(type="button" aria-label="Button for burger menu") 
 				span.header__burger-line
 				span.header__burger-line
 				span.header__burger-line
