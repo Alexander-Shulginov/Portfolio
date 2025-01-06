@@ -2,6 +2,7 @@
     var meta = {
         title: "Alexander Shulginov Portfolio",
         descr: "HTML верстальщик / Frontend разработчик",
+        author: "Alexander Shulginov",
         applicationName: null, // for app, not site
         robots: "index, follow", // or "noindex, nofollow"
         utf: "UTF-8",
@@ -25,8 +26,8 @@ if meta.robots
     meta(name="robots", content=meta.robots)
 
 if meta.descr 
+    meta(name="author", content=meta.author)
     meta(name="description", content=meta.descr)
-    meta(name="author", content="Alexander Shulginov")
 
 if meta.title 
     title= meta.title 
