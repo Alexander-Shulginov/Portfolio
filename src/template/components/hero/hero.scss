@@ -1,6 +1,13 @@
 .hero {
 	padding: 180px 0;
 
+	&--front {
+		color: #fbc02d;
+	}
+	&--html {
+		color: #0f7dff;
+	}
+
 	&__inner {
 		display: flex;
 		gap: 24px;
@@ -12,6 +19,10 @@
 		}
 	}
 
+	&__letter {
+		user-select: none;
+	}
+
 	&__descr {
 		font-family: $main-font;
 		font-size: clamp-px(26, 42);
@@ -19,12 +30,12 @@
 		color: $color-base;
 	}
 
-	&__descr--front {
-		color: #fbc02d;
+	&__wrap {
+		display: flex;
 	}
 
-	&__descr--html {
-		color: #0f7dff;
+	&__space {
+		width: 12px;
 	}
 
 	&__photo {

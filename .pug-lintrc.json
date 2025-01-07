@@ -33,10 +33,6 @@
 		{ "input[type=submit]": "value" }
 	],
 	"requireStrictEqualityOperators": true,
-	"validateAttributeSeparator": {
-		"separator": ", ",
-		"multiLineSeparator": "\t"
-	},
 	"multiline-attributes": true,
 	"validateDivTags": true,
 	"validateLineBreaks": "LF",
