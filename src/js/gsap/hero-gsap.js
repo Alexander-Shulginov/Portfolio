@@ -4,9 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function initGsap() {
+export default function heroGsap() {
 	const heroLetters = gsap.utils.toArray('.hero__letter');
-	const workList = gsap.utils.toArray('.works__item');
 
 	heroLetters.forEach((element, index) => {
 		gsap.from(element, {
@@ -25,20 +24,5 @@ export default function initGsap() {
 		duration: 0.7,
 		delay: 0.2,
 		x: 25,
-	});
-
-	workList.forEach((element, index) => {
-		gsap.from(element, {
-			scrollTrigger: {
-				trigger: '.works',
-				start: '-35%',
-				end: '90%',
-				markers: true,
-			},
-			y: 20,
-			opacity: 0,
-			duration: 0.9,
-			delay: index * 0.4,
-		});
 	});
 }

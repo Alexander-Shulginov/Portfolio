@@ -1,5 +1,5 @@
 import burgeMenuInit from './burger';
-import initGsap from './gsap-animations';
+import gsapInit from './gsap/gsap-animations';
 
-initGsap();
+gsapInit();
 burgeMenuInit();

@@ -1,5 +1,5 @@
 .hero {
-	padding: 180px 0;
+	padding: 240px 0;
 
 	&--front {
 		color: #fbc02d;
@@ -70,10 +70,10 @@
 	}
 
 	@media (max-width: 960px) {
-		padding: 120px 0;
+		padding: 160px 0;
 	}
 
 	@media (max-width: 768px) {
-		padding: 100px 0;
+		padding: 130px 0;
 	}
 }
