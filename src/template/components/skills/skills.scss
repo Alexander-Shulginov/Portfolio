@@ -1,5 +1,5 @@
 .skills {
-	padding-bottom: clamp-px(100, 160);
+	padding-bottom: 180px;
 
 	&__title {
 		margin-bottom: 86px;
@@ -63,5 +63,9 @@
 
 	&__link {
 		text-decoration: underline;
+	}
+
+	@media (max-width: 768px) {
+		padding-bottom: 120px;
 	}
 }
