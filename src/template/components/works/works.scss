@@ -94,18 +94,22 @@
 
 	&__tech {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 12px;
 		align-items: center;
+
 		margin-bottom: 20px;
 
-		@media (max-width: 768px){
+		@media (max-width: 768px) {
 			margin-bottom: 22px;
 		}
 	}
 
 	&__icon {
 		position: relative;
+
 		display: flex;
+		flex-shrink: 0;
 		align-items: center;
 		justify-content: center;
 

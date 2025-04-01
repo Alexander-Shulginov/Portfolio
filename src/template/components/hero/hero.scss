@@ -21,11 +21,12 @@
 
 	&__letter {
 		user-select: none;
+		margin-left: 12px;
 	}
 
 	&__descr {
 		font-family: $main-font;
-		font-size: clamp-px(26, 42);
+		font-size: clamp-px(24, 42);
 		font-weight: 500;
 		color: $color-base;
 	}
