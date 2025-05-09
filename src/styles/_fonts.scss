@@ -1,0 +1,15 @@
+@mixin font-face($font-family, $file-path, $weight: normal) {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        display: swap;
+        src: local($font-family), url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff');
+    }
+}
+
+@include font-face('Lato', '/fonts/Lato/lato-medium', 500);
+@include font-face('Lato', '/fonts/Lato/lato-bold', 700);
+
+@include font-face('Roboto', '/fonts/Roboto/roboto-regular', 400);
+@include font-face('Roboto', '/fonts/Roboto/roboto-medium', 500);
+@include font-face('Roboto', '/fonts/Roboto/roboto-bold', 700);

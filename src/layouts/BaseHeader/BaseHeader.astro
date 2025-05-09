@@ -1,0 +1,86 @@
+---
+import '@/styles/global.scss';
+import { Icon } from 'astro-icon/components';
+
+const navLinks = [
+    {
+        name: 'Работы',
+        to: '#works',
+    },
+    {
+        name: 'Навыки',
+        to: '#skills',
+    },
+    {
+        name: 'Опыт',
+        to: '#exp',
+    },
+    {
+        name: 'Контакты',
+        to: '#contacts',
+    },
+];
+
+const socialLinks = [
+    {
+        iconName: 'social/telegram',
+        link: 'tg://resolve?domain=@Alexander_721',
+    },
+    {
+        iconName: 'social/whatsapp',
+        link: 'https://wa.me/79175517349',
+    },
+    {
+        iconName: 'social/gmail',
+        link: 'mailto:alexander3post@gmail.com',
+    },
+    {
+        iconName: 'stack/github',
+        link: 'https://github.com/Alexander-Shulginov',
+    },
+];
+---
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <nav class="header__nav" tabindex="0">
+                <ul class="header__list">
+                    {
+                        navLinks.map((link) => (
+                            <li class="header__item">
+                                <a class="header__link" href={link.to}>
+                                    {link.name}
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </nav>
+            <div class="header__links">
+                {
+                    socialLinks.map((item) => (
+                        <a class="header__link" href={item.link} aria-label="Social link">
+                            <Icon name={item.iconName} width={21} height={21} />
+                        </a>
+                    ))
+                }
+            </div>
+
+            <button class="header__burger" type="button" aria-label="Button for burger menu">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<script>
+    import { burgerMenuInit } from './BaseHeader';
+    burgerMenuInit();
+</script>
+
+<style lang="scss">
+    @import './BaseHeader';
+</style>
