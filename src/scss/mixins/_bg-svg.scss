@@ -1,5 +1,0 @@
-$iconPath: "../icons/sprite.svg#";
-
-@mixin bg-svg($iconName) {
-	background-image: url("#{$iconPath}#{$iconName}");
-}
