@@ -1,5 +1,17 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+import SectionHero from '@/components/SectionHero.astro';
+import SectionWorks from '@/components/SectionWorks.astro';
+import SectionSkills from '@/components/SectionSkills.astro';
+import SectionExp from '@/components/SectionExp.astro';
+import SectionContacts from '@/components/SectionContacts.astro';
 ---
 
-<BaseLayout />
+<BaseLayout> 
+    <SectionHero />
+    <SectionWorks />
+    <SectionSkills />
+    <SectionExp />
+    <SectionContacts />
+</BaseLayout>

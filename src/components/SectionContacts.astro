@@ -1,0 +1,91 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<section class="contacts" id="contacts">
+    <div class="container">
+        <h2 class="contacts__title">Контакты</h2>
+        <ul class="contacts__list">
+            <li class="contacts__item">
+                <Icon name="social/telegram" width={36} height={36} />
+                <a class="contacts__link" href="tg://resolve?domain=@Alexander_721" target="blank"> @Alexander_721</a>
+            </li>
+            <li class="contacts__item">
+                <Icon name="social/whatsapp" width={36} height={36} />
+                <a class="contacts__link" href="https://wa.me/79175517349" target="blank"> +7 (917) 551 73 49</a>
+            </li>
+            <li class="contacts__item">
+                <Icon name="stack/github" width={36} height={36} />
+                <a class="contacts__link" href="https://github.com/Alexander-Shulginov" target="blank"> /Alexander-Shulginov</a>
+            </li>
+            <li class="contacts__item">
+                <Icon name="social/gmail" width={36} height={36} />
+                <a class="contacts__link" href="mailto:alexander3post@gmail.com" target="blank"> alexander3post@gmail.com</a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<style lang="scss">
+    .contacts {
+        padding: clamp-px(40, 90) 0;
+
+        &__title {
+            margin-bottom: 34px;
+            font-size: $fz-title-section;
+            color: $color-light;
+            text-align: center;
+
+            @media (max-width: 768px) {
+                margin-bottom: 22px;
+                font-size: $fz-title-secion-mobile;
+            }
+        }
+
+        &__list {
+            transform: translateX(40px);
+
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            justify-content: center;
+
+            width: 270px;
+            margin: 0 auto;
+
+            @media (max-width: 768px) {
+                transform: translateX(22px);
+            }
+        }
+
+        &__item {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        &__link {
+            font-family: $main-font;
+            color: $color-base;
+            font-size: clamp-px(16, 18);
+            font-weight: 500;
+            position: relative;
+            @media (any-hover: hover) {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 2px;
+                    background-color: $color-base;
+                    transition: width 0.3s ease-in-out;
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+</style>

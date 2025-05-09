@@ -1,5 +1,5 @@
 ---
-import '@/styles/global.scss';
+// import '@/styles/global.scss';
 import { Icon } from 'astro-icon/components';
 
 const navLinks = [
@@ -60,7 +60,7 @@ const socialLinks = [
             <div class="header__links">
                 {
                     socialLinks.map((item) => (
-                        <a class="header__link" href={item.link} aria-label="Social link">
+                        <a class="header__link" href={item.link} aria-label="Social link" target="_blank">
                             <Icon name={item.iconName} width={21} height={21} />
                         </a>
                     ))
