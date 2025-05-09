@@ -2,6 +2,54 @@
 import CircleSkills from './CircleSkills.astro';
 ---
 
+<script>
+    //@ts-nocheck
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    function skillsGsap() {
+        const heroLetters = gsap.utils.toArray('.circle__item');
+        const skillsElem = gsap.utils.toArray('.skills__elem');
+
+        const shuffledHeroLetters = shuffleArray([...heroLetters]);
+
+        shuffledHeroLetters.forEach((element, index) => {
+            gsap.from(element, {
+                scrollTrigger: {
+                    trigger: '.skills',
+                    start: '-30%',
+                },
+                opacity: 0,
+                scale: 1.2,
+                duration: 0.8,
+                delay: index * 0.1,
+            });
+        });
+
+        skillsElem.forEach((element, index) => {
+            gsap.from(element, {
+                scrollTrigger: {
+                    trigger: '.skills__list',
+                },
+                opacity: 0,
+                duration: 0.6,
+                delay: index * 0.1,
+            });
+        });
+    }
+    skillsGsap();
+</script>
+
 <section class="skills" id="skills">
     <div class="container">
         <h2 class="skills__title">Навыки</h2>
