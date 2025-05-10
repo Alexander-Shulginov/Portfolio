@@ -16,9 +16,6 @@ import Photo from '@/assets/img/photo.webp';
             </h1>
             <div class="hero__photo">
                 <Image src={Photo} width={Photo.width} height={Photo.height} densities={[2, 3]} fetchpriority="high" loading={'eager'} alt="Photo" />
-                <picture>
-                    <source srcset="./img/photo@2x.webp 2x, ./img/photo@3x.webp 3x" type="image/webp" /><img class="header__img" src="./img/photo.webp" width="379" height="387" alt="My photo" />
-                </picture>
             </div>
         </div>
     </div>
