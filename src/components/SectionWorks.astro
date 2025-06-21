@@ -3,6 +3,7 @@ import { Icon } from 'astro-icon/components';
 import Image from 'astro/components/Image.astro';
 
 import gameWorldImg from '@/assets/img/example/game-world.png';
+import bankBoardImg from '@/assets/img/example/bankboard.png'
 import LuxTripImg from '@/assets/img/example/lux-trips.png';
 import VnotesImg from '@/assets/img/example/v-notes.png';
 import NeoMorphimg from '@/assets/img/example/form.png';
@@ -59,6 +60,49 @@ import ViteImg from '@/assets/img/vite.png';
                         <a class="works__visit" href="https://the-games-world.netlify.app/" target="_blank">Посетить</a>
 
                         <a class="works__git-link" href="https://github.com/Alexander-Shulginov/Games_World" target="_blank" aria-label="Github link">
+                            <Icon name="stack/github" width={34} height={34} />
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="works__item">
+                <div class="works__img">
+                    <Image src={bankBoardImg} width={bankBoardImg.width} height={bankBoardImg.height} densities={[2, 3]} alt="BankBoard project screenshot" />
+                </div>
+                <div class="works__content">
+                    <div class="works__top">
+                        <p class="works__type">Dashboard</p>
+                        <h3 class="works__name">BankBoard</h3>
+                    </div>
+                    <p class="works__descr">Интерактивный дашборд для онлайн банка</p>
+                    <div class="works__tech">
+                        <div class="works__icon">
+                            <Icon name="stack/vue" width={34} height={34} />
+                            <div class="works__tooltip">Vue</div>
+                        </div>
+                        <div class="works__icon">
+                            <Icon name="stack/ts" width={34} height={34} />
+                            <div class="works__tooltip">TypeScript</div>
+                        </div>
+                        <div class="works__icon">
+                            <Image src={ViteImg} width={34} height={34} densities={[2, 3]} alt="Vite logo" />
+                            <div class="works__tooltip">Vite</div>
+                        </div>
+                        <div class="works__icon">
+                            <Icon name="stack/tailwind" width={34} height={34} />
+                            <div class="works__tooltip">Tailwind</div>
+                        </div>
+                        <div class="works__icon">
+                            <Icon name="stack/chartjs" width={34} height={34} />
+                            <div class="works__tooltip">Chart.js</div>
+                        </div>
+                    </div>
+
+                    <div class="works__block">
+                        <a class="works__visit" href="https://alexander-shulginov.github.io/Bank-Dashboard/" target="_blank">Посетить</a>
+
+                        <a class="works__git-link" href="https://github.com/Alexander-Shulginov/Bank-Dashboard" target="_blank" aria-label="Github link">
                             <Icon name="stack/github" width={34} height={34} />
                         </a>
                     </div>
